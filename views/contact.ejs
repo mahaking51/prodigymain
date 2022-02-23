@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css" type="text/css">
+    <title>PRODIGY'22</title>
+    <link rel="icon" href="/assets/logo/prodigy.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+  </head>
+<body>
+    <div id='mySidenav' class='sidenav'>
+        <nav class="navbar navbar-light bg-white border-bottom ">
+            <div class="container-fluid text-center">
+                <i class="fas fa-bars fs-1 mx-1 mx-sm-4 position-absolute" onclick='closeNav()'></i>
+                <div class=" m-auto my-3 title">PRODIGY</div>
+
+            </div>
+        </nav>
+        <a href="/" >HOME</a>
+        <a href="/about_us">ABOUT</a>
+        <a href="/gallery">GALLERY</a>
+        <a href="/schedule">SCHEDULE</a>
+        <a href="/contact" class='currentPage' style="color:white;font-size:x-large;">CONTACT</a>
+    </div>
+    <nav class="navbar navbar-light bg-white border-bottom ">
+        <div class="container-fluid">
+            <i class="fas fa-bars fs-1 mx-1 mx-sm-4 position-absolute" onclick='openNav()'></i>
+            <span class=" m-auto my-3 title">PRODIGY</span>
+        </div>
+    </nav>
+    <div onclick="closeNav()" id="contactus">
+        <h2>Contact Us</h2>
+        <form action="/mail" method="post">
+        <div class="row g-2">
+            <div class="col-md">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputGrid" name="name">
+                <label for="floatingInputGrid" required>Name</label>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInputGrid" name="email" >
+                <label for="floatingSelectGrid" required>Email</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="subject" required>
+            <label for="floatingInput">Subject</label>
+          </div>
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px" rows="10" name="message" required></textarea>
+            <label for="floatingTextarea2">Message</label>
+          </div>
+          <button type="submit" class="btn" id="send">Send an Email to us...</button>
+        </form>
+          
+          <div id='findus'>
+            
+            <div class="container-fluid container-sm py-3 px-3">
+              <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                      <h2 class="fw-bolder"><u><b>Find us at</b></u></h2>
+                      <div class='d-flex social my-4 '>
+                        <a href='https://www.instagram.com/prodigynittrichy/' target="_blank"><i class="fab fa-instagram my-2"></i></a>
+                        <a href='https://www.facebook.com/prodigynitttrichy/' target="_blank"><i class="fab fa-facebook mx-3 my-2"></i></a>
+                        <a href='https://www.linkedin.com/company/prodigynittrichy/' target="_blank"><i class="fab fa-linkedin my-2"></i></a>
+                        <span class='mx-3 my-2'>@prodigynittrichy</span>
+                    </div>
+                      <h4 class="fw-bolder"><u><b>Call us at</b></u></h4>
+                      <ol class="list-group list-group-numbered">
+                          <ol>Kasiviswanath: +917871242444</ol>
+                          <ol>Priyadharshini: +919789809217</ol>
+                          <ol>Ponniraivan: +917418621705</ol>
+                        </ol>
+                    </div>
+                    <div class="col-md-6">
+                      <div id="mapH">
+                        <div id="map"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <footer class="d-flex justify-content-between justify-content-sm-around fs-xs-3  py-3 container-fluid">
+            <a href="/">
+                <div class="py-3">Home</div>
+            </a>
+            <a href="/about_us">
+                <div class="py-3">About</div>
+            </a>
+            <a href="/gallery">
+                <div class="py-3">Gallery</div>
+            </a>
+            <a href="/schedule">
+                <div class="py-3 ">Schedule</div>
+            </a>
+            <a href="/contact">
+                <div class="py-3 currentPage fw-bolder align-baseline">Contact</div>
+            </a>
+        </footer>
+</body>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibWFoYWtpbmc1MTAiLCJhIjoiY2t6bnNzMnZuMDY1dzJ1bWZucXBzenh5NiJ9.OFlS-TBPnYVf_OHYcqfMVA';
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [78.8132, 10.7589],
+zoom: 13
+});
+ 
+// Create a default Marker and add it to the map.
+const marker1 = new mapboxgl.Marker()
+.setLngLat([78.81615636655087,10.761200571137708,])
+.addTo(map);
+ 
+  function openNav() {
+    document.getElementById('mySidenav').style.left = '0';
+  }
+  
+  function closeNav() {
+    document.getElementById('mySidenav').style.left = '-100%'
+  }
+    </script>
+    
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
+</html>

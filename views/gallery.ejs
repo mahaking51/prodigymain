@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODIGY'22</title>
+    <link rel="icon" href="/assets/logo/prodigy.ico">
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id='mySidenav' class='sidenav'>
+        <nav class="navbar navbar-light bg-white border-bottom ">
+            <div class="container-fluid text-center">
+                <i class="fas fa-bars fs-1 mx-1 mx-sm-4 position-absolute" onclick='closeNav()'></i>
+                <div class=" m-auto my-3 title">PRODIGY</div>
+
+            </div>
+        </nav>
+        <a href="/" >HOME</a>
+        <a href="/about_us">ABOUT</a>
+        <a href="/gallery" class='currentPage' style="color:white;font-size:x-large;">GALLERY</a>
+        <a href="/schedule">SCHEDULE</a>
+        <a href="/contact">CONTACT</a>
+    </div>
+    <nav class="navbar navbar-light bg-white border-bottom ">
+        <div class="container-fluid">
+            <i class="fas fa-bars fs-1 mx-1 mx-sm-4 position-absolute" onclick='openNav()'></i>
+            <span class=" m-auto my-3 title">PRODIGY</span>
+        </div>
+    </nav>
+    <div onclick="closeNav()" id="gallery">
+        <h2 class="fw-bolder">G a l l e r y</h2>
+        <div class="image-grid">
+            <img class="image-grid-col-2 image-grid-row-2" src="https://drive.google.com/uc?export=view&id=1nJsVmSa4cQtg8wNc4PB1kPOkLY_HFZsS" alt="architecture">
+            <img src="https://drive.google.com/uc?export=view&id=1RAov2Cv4Tl6UDD_o7fctjur5mePK2JQX" alt="Error">
+            <img src="https://drive.google.com/uc?export=view&id=1oHLDCbe3sChu3WylgXUevqO_TWBV8_rM" alt="architecture">
+            <img src="https://drive.google.com/uc?export=view&id=1OWyqTLUaPkFa1XBYJkws1Qjd7wC3r4mo" alt="architecture">
+            <img src="https://drive.google.com/uc?export=view&id=1-5rSLkg45bedSq6LFvPLoRDNDDnltUl2" alt="architecture">
+          </div>
+    </div>
+    <footer class="d-flex justify-content-between justify-content-sm-around fs-xs-3  py-3 container-fluid">
+        <a href="/">
+            <div class="py-3 ">Home</div>
+        </a>
+        <a href="/about_us">
+            <div class="py-3">About</div>
+        </a>
+        <a href="/gallery">
+            <div class="py-3 currentPage fw-bolder align-baseline">Gallery</div>
+        </a>
+        <a href="/schedule">
+            <div class="py-3 ">Schedule</div>
+        </a>
+        <a href="/contact">
+            <div class="py-3 ">Contact</div>
+        </a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="galleryScript.js"></script>
+</body>
+
+</html>

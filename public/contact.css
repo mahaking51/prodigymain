@@ -1,0 +1,167 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-image: url("./assets/bg/WEBSITE_BG.png");
+  color: white;
+}
+:root {
+  --dark-purple: #240046;
+  --light-purple: #3C096C;
+  --lighter-purple: #5A189A;
+  --white-purple: #C77DFF;
+  --whiter-purple: #E0AAFF;
+  --hover-white-purple: #9D4EDD;
+}
+
+@font-face {
+  font-family: ubuntu;
+  src: url('../assets/fonts/Ubuntu-Medium.ttf')
+}
+
+@font-face {
+  font-family: prompt;
+  src: url('../assets/fonts/Prompt-Medium.ttf')
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.title {
+  color: var(--light-purple);
+  font-weight: 1000;
+  font-size: 2.6rem;
+}
+
+.navbar {
+  font-family: prompt;
+}
+
+.navbar>div>i {
+  cursor: pointer;
+}
+
+.desc {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: ubuntu;
+  color: var(--light-purple)
+}
+
+footer {
+  background-color: var(--lighter-purple);
+}
+
+.currentPage {
+  color: white;
+  font-style: 1.2rem;
+}
+
+.currentPage:hover {
+  color: rgb(177, 177, 177)
+}
+
+footer>a {
+  color: var(--white-purple);
+  text-decoration: none;
+  font-family: prompt;
+}
+
+footer>a:hover {
+  color: var(--hover-white-purple)
+}
+#contactus{
+  height: 100%;
+  margin:auto;
+  width:75%;
+  padding:1.2rem 1rem;
+  font-family: ubuntu;
+  background: repeat url('../assets/bg/WEBSITE_BG.png') !important;
+}
+#contactus h2{
+  color: white;
+  
+}
+.firstRow{
+  display: inline-block;
+}
+#send{
+  color:white;
+  margin-top:1.2rem;
+  padding:1rem;
+  border-radius: 2rem;
+  background-color: #5A189A;
+}
+#findus {
+  background: repeat-x url('../assets/bg/WEBSITE_BG.png');
+}
+
+#findus h2 {
+  color: white;
+}
+#findus h4 {
+  color: white;
+}
+#findus ol{
+  color: white;
+}
+#findus a {
+  color: white;
+  font-size: 2rem;
+}
+
+#findus>div>a {
+  color: var(--lighter-purple);
+}
+
+.social span {
+  font-family: ubuntu;
+}
+
+#findus span {
+  color: white;
+}
+.sidenav {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -100%;
+  background: repeat url('assets/bg/WEBSITE_BG.png');
+  overflow-x: hidden;
+  transition: all linear 0.5s;
+  text-align: center;
+}
+
+.sidenav a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 0 20px 0;
+  color: #C77DFF;
+}
+
+.sidenav a:hover {
+  color: var(--hover-white-purple)
+}
+#mapH{
+  /* position:relative; */
+  height:300px;
+}
+#map {
+  position: absolute;
+  margin:auto; 
+  width: 30%;
+  height:250px;
+  min-width:250px;
+  max-width:480px;
+  
+  
+}

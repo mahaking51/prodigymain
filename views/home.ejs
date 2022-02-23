@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODIGY'22</title>
+    <link rel="icon" href="/assets/logo/prodigy.ico">
+    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id='mySidenav' class='sidenav'>
+        <nav class="navbar navbar-light bg-white border-bottom ">
+            <div class="container-fluid text-center">
+                <i class="fas fa-bars fs-1 mx-1 mx-sm-4 position-absolute" onclick='closeNav()'></i>
+                <div class=" m-auto my-3 title">PRODIGY</div>
+            </div>
+        </nav>
+        <a href="/" class='currentPage' style="color:white;font-size:x-large;">HOME</a>
+        <a href="/about_us">ABOUT</a>
+        <a href="/gallery">GALLERY</a>
+        <a href="/schedule">SCHEDULE</a>
+        <a href="/contact">CONTACT</a>
+    </div>
+    <nav class="navbar navbar-light bg-white border-bottom ">
+        <div class="container-fluid">
+            <i class="fas fa-bars fs-1 mx-1 mx-sm-4 position-absolute" onclick='openNav()'></i>
+            <span class=" m-auto my-3 title">PRODIGY</span>
+
+        </div>
+    </nav>
+    <div onclick="closeNav()">
+        <div class="d-flex flex-column align-items-center px-4 py-4">
+            <img src="../assets/logo/prodigy.ico" alt="prodigy" style="width:45vw;max-width: 400px;min-width: 200px;">
+            <h3 class='desc container text-center fs-4'>The Annual Technical Symposium of Production Engineering Department, NIT-T</h3>
+        </div>
+        <div id='aboutus'>
+            <div class=" container-fluid container-sm py-3 px-3">
+                <h2 class="fw-bolder"><u><b>About Us</b></u> </h2>
+                <p class='py-3'>Prodigy, the annual symposium of the Production department is back again, offering a refreshing set of events, workshops, guest lectures and quizzes that will keep your minds sharp and hone your skills. A student run organization that
+                    aims at encouraging technical innovation and developing managerial skills, Prodigy'21 allows you a chance to test your expertise by competing with fellow prodigies and find out where you stand. With outreach programs conducted in various
+                    cities and activities conducted all throughout the year, months of hard work reaches a crescendo in the last two days attracting a footfall of more than 1000 students from various other colleges as prodigy strives to break boundaries
+                    and test the limits of the technological world. With each passing edition, Prodigy refines itself to become even better and attempts to break it's own record and Prodigy'21 promises nothing short of a phenomenal experience that will
+                    leave you awestruck at the marvels of technology.</p>
+
+                <p>Click the link below to know more about Prodigy'22</p>
+                <a class='btn rounded-pill py-sm-2 px-4 px-sm-5 my-3 fs-4 bg-white fw-bolder' href='/about_us' role='button'><b>
+                        About Us</b></a>
+            </div>
+        </div>
+        <div id='findus'>
+            <div class="container-fluid container-sm py-3 px-3">
+                <h2 class="fw-bolder"><u><b>Find us at</b></u></h2>
+                <div class='d-flex social my-4 '>
+                    <a href='https://www.instagram.com/prodigynittrichy/' target="_blank"><i class="fab fa-instagram my-2"></i></a>
+                    <a href='https://www.facebook.com/prodigynitttrichy/' target="_blank"><i class="fab fa-facebook mx-3 my-2"></i></a>
+                    <a href='https://www.linkedin.com/company/prodigynittrichy/' target="_blank"><i class="fab fa-linkedin my-2"></i></a>
+                    <span class='mx-3 my-2'>@prodigynittrichy</span>
+                </div>
+                <a class='btn rounded-pill py-sm-2 px-4 px-sm-5 fs-4  bg-white fw-bolder' href='/contact' role='button'><b>Contact Us</b> </a>
+            </div>
+        </div>
+        <footer class="d-flex justify-content-between justify-content-sm-around fs-xs-3  py-3 container-fluid">
+            <a href="/">
+                <div class="py-3 currentPage fw-bolder align-baseline">Home</div>
+            </a>
+            <a href="/about_us">
+                <div class="py-3">About</div>
+            </a>
+            <a href="/gallery">
+                <div class="py-3">Gallery</div>
+            </a>
+            <a href="/schedule">
+                <div class="py-3 ">Schedule</div>
+            </a>
+            <a href="/contact">
+                <div class="py-3 ">Contact</div>
+            </a>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="homeScript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+:root {
+    --dark-purple: #240046;
+    --light-purple: #3C096C;
+    --lighter-purple: #5A189A;
+    --white-purple: #C77DFF;
+    --whiter-purple: #E0AAFF;
+    --hover-white-purple: #9D4EDD;
+}
+
+@font-face {
+    font-family: ubuntu;
+    src: url('../assets/fonts/Ubuntu-Medium.ttf')
+}
+
+@font-face {
+    font-family: prompt;
+    src: url('../assets/fonts/Prompt-Medium.ttf')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.title {
+    color: var(--light-purple);
+    font-weight: 1000;
+    font-size: 2.6rem;
+}
+
+.navbar {
+    font-family: prompt;
+}
+
+.navbar>div>i {
+    cursor: pointer;
+}
+
+#aboutus {
+    background-color: var(--whiter-purple);
+    font-family: 'ubuntu';
+}
+
+#aboutus>div>p {
+    color: var(--dark-purple);
+    font-weight: 500;
+}
+
+.desc {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: ubuntu;
+    color: var(--light-purple)
+}
+
+#findus {
+    background: repeat-x url('../assets/bg/WEBSITE_BG.png');
+}
+
+#findus h2 {
+    color: white;
+}
+
+#findus a {
+    color: white;
+    font-size: 2rem;
+}
+
+#findus>div>a {
+    color: var(--lighter-purple);
+}
+
+.social span {
+    font-family: ubuntu;
+}
+
+#findus span {
+    color: white;
+}
+
+footer {
+    background-color: var(--lighter-purple);
+}
+
+.currentPage {
+    color: white;
+    font-style: 1.2rem;
+}
+
+.currentPage:hover {
+    color: rgb(177, 177, 177)
+}
+
+footer>a {
+    color: var(--white-purple);
+    text-decoration: none;
+    font-family: prompt;
+}
+
+footer>a:hover {
+    color: var(--hover-white-purple)
+}
+
+.sidenav {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -100%;
+    background: repeat url('../assets/bg/WEBSITE_BG.png');
+    overflow-x: hidden;
+    transition: all linear 0.5s;
+    text-align: center;
+}
+
+.sidenav a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 0 20px 0;
+    color: #C77DFF;
+}
+
+.sidenav a:hover {
+    color: var(--hover-white-purple)
+}
