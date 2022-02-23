@@ -5,6 +5,7 @@ const bodyParser= require('body-parser');
 const ejs=require('ejs');
 const nodemailer=require('nodemailer');
 const { log } = require('console');
+const port=process.env.PORT || 3000;
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({
     extended:true
@@ -53,6 +54,6 @@ app.post('/mail',function(req,res){
 app.get('/gallery',function(req,res){
     res.render('gallery');
 })
-http.listen(3000,function(){
+http.listen(port,function(){
     console.log('listening on*:3000');
 })
